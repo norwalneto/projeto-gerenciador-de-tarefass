@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Dashboard</h2>
+        <p>Informações importantes sobre o progresso e estatísticas do seu sistema podem ser exibidas aqui.</p>
+
+        <!-- Área para o gráfico -->
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <script src="/scripts.js"></script>
+    <script>
+        // Executa o gráfico quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', function() {
+            loadChart();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarefas</title>
+    <!-- Inclua o CSS para os estilos -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div th:fragment="content">
+    <h2>Tarefas</h2>
+
+    <!-- Formulário para adicionar nova tarefa -->
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Título da tarefa" required>
+        <input type="text" id="description" placeholder="Descrição da tarefa" required>
+        <select id="status" required>
+            <option value="Pendente">Pendente</option>
+            <option value="Em progresso">Em progresso</option>
+            <option value="Concluído">Concluído</option>
+        </select>
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
+
+    <!-- Container para os cards das tarefas -->
+    <div id="taskList" class="tasks-container">
+        <!-- Os cards das tarefas serão adicionados aqui dinamicamente -->
+    </div>
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+<!-- Script para adicionar funcionalidade dinâmica -->
+<script src="/scripts.js"></script>
+</body>
+</html>
